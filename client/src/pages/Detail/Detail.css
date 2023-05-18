@@ -1,0 +1,210 @@
+.Detail {
+	width: 100%;
+	min-height: 100vh;
+	margin: 8rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CardDetail {
+	width: 50rem;
+	height: 100%;
+	padding: 2rem 6rem;
+	margin-bottom: 4rem;
+	box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.17);
+	border-radius: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* First part */
+.CardDetail-first {
+	width: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.CardDetail-hp {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	align-items: end;
+}
+
+.CardDetail-hp span {
+	margin-right: .5rem;
+}
+
+.CardDetail-name {
+	width: 100%;
+	justify-content: center;
+	text-transform: capitalize;
+}
+
+.CardDetail-img {
+	width: 30rem;
+	height: 30rem;
+	margin-bottom: 2rem;
+}
+
+.CardDetail-types {
+	width: 100%;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.CardDetail-types img {
+	width: 7rem;
+	height: 7rem;
+	margin: 0 3rem;
+}
+
+/* Second part */
+.CardDetail-second {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.CardDetail-stats-first {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 3rem;
+}
+
+.CardDetail-stats-second {
+	width: 100%;
+}
+
+.CardDetail-height,
+.CardDetail-weight{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.CardDetail-height span,
+.CardDetail-weight span {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.borderDetail {
+	border-right: 1px solid #888;
+}
+
+.CardDetail-stats {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.CardDetail-progress-bar {
+  width: 20rem;
+	height: 3rem;
+	padding: 4px;
+  border-radius: 6px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+	appearance: none;
+}
+
+.CardDetail-progress-bar::-webkit-progress-bar {
+  background-color: #eee;
+}
+
+.CardDetail-progress-bar::-webkit-progress-value {
+	border-radius: .5rem;
+}
+
+.CardDetail-progress-bar.normal::-webkit-progress-value {
+  background-color: #a8a878;
+}
+
+.CardDetail-progress-bar.fighting::-webkit-progress-value {
+  background-color: #c03028;
+}
+
+.CardDetail-progress-bar.flying::-webkit-progress-value {
+  background-color: #a890f0;
+}
+
+.CardDetail-progress-bar.poison::-webkit-progress-value {
+  background-color: #a040a0;
+}
+
+.CardDetail-progress-bar.ground::-webkit-progress-value {
+  background-color: #e0c068;
+}
+
+.CardDetail-progress-bar.rock::-webkit-progress-value {
+  background-color: #b8a038;
+}
+
+.CardDetail-progress-bar.bug::-webkit-progress-value {
+  background-color: #a8b820;
+}
+
+.CardDetail-progress-bar.ghost::-webkit-progress-value {
+  background-color: #705898;
+}
+
+.CardDetail-progress-bar.steel::-webkit-progress-value {
+  background-color: #b8b8d0;
+}
+
+.CardDetail-progress-bar.fire::-webkit-progress-value {
+  background-color: #f08030;
+}
+
+.CardDetail-progress-bar.water::-webkit-progress-value {
+  background-color: #6890f0;
+}
+
+.CardDetail-progress-bar.grass::-webkit-progress-value {
+  background-color: #78c850;
+}
+
+.CardDetail-progress-bar.electric::-webkit-progress-value {
+  background-color: #f8d030;
+}
+
+.CardDetail-progress-bar.psychic::-webkit-progress-value {
+  background-color: #f85888;
+}
+
+.CardDetail-progress-bar.ice::-webkit-progress-value {
+  background-color: #98d8d8;
+}
+
+.CardDetail-progress-bar.dragon::-webkit-progress-value {
+  background-color: #7038f8;
+}
+
+.CardDetail-progress-bar.dark::-webkit-progress-value {
+  background-color: #705848;
+}
+
+.CardDetail-progress-bar.fairy::-webkit-progress-value {
+  background-color: #ee99ac;
+}
+
+.CardDetail-progress-bar.unknown::-webkit-progress-value {
+  background-color: #68a090;
+}
+
+.CardDetail-progress-bar.shadow::-webkit-progress-value {
+  background-color: #5b5b5b;
+}

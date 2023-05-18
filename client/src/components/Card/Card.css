@@ -1,0 +1,168 @@
+.Card {
+	width: 25rem;
+	height: 25rem;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 9px 10px rgba(0,0,0,0.17);
+	margin: 7rem auto;
+	padding: .5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Card-img {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	position: relative;
+	transition: all .3s ease-in-out;
+}
+
+.Card:hover .Card-img{
+	width: 21rem;
+	height: 21rem;
+}
+
+.Card-info {
+	width: 100%;
+	transform: translateY(-50%);
+	flex-direction: column;
+	align-items: center;
+}
+
+.Card-info-id{
+	width: 25%;
+	margin-left: .5rem;
+	border-radius: 1rem;
+	background-color: #cdc776;
+}
+
+.Card-info-name {
+	width: 100%;
+	padding: 1rem 0;
+	text-shadow: 0 8px 9px rgb(160, 149, 131), 0px -2px 1px #fff;
+	font-weight: bold;
+	font-size: 3rem;
+	background: -webkit-linear-gradient(#ffffff, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000000a5;
+}
+
+.Card-types {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.Card-type {
+	width: 40%;
+	height: 4rem;
+	border-radius: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Card-type.normal {
+  background-color: #a8a878;
+  color: white;
+}
+
+.Card-type.fighting {
+  background-color: #c03028;
+  color: white;
+}
+
+.Card-type.flying {
+  background-color: #a890f0;
+  color: white;
+}
+
+.Card-type.poison {
+  background-color: #a040a0;
+  color: white;
+}
+
+.Card-type.ground {
+  background-color: #e0c068;
+  color: white;
+}
+
+.Card-type.rock {
+  background-color: #b8a038;
+  color: white;
+}
+
+.Card-type.bug {
+  background-color: #a8b820;
+  color: white;
+}
+
+.Card-type.ghost {
+  background-color: #705898;
+  color: white;
+}
+
+.Card-type.steel {
+  background-color: #b8b8d0;
+  color: white;
+}
+
+.Card-type.fire {
+  background-color: #f08030;
+  color: white;
+}
+
+.Card-type.water {
+  background-color: #6890f0;
+  color: white;
+}
+
+.Card-type.grass {
+  background-color: #78c850;
+  color: white;
+}
+
+.Card-type.electric {
+  background-color: #f8d030;
+  color: white;
+}
+
+.Card-type.psychic {
+  background-color: #f85888;
+  color: white;
+}
+
+.Card-type.ice {
+  background-color: #98d8d8;
+  color: white;
+}
+
+.Card-type.dragon {
+  background-color: #7038f8;
+  color: white;
+}
+
+.Card-type.dark {
+  background-color: #705848;
+  color: white;
+}
+
+.Card-type.fairy {
+  background-color: #ee99ac;
+  color: white;
+}
+
+.Card-type.unknown {
+  background-color: #68a090;
+  color: white;
+}
+
+.Card-type.shadow {
+  background-color: #5b5b5b;
+  color: white;
+}

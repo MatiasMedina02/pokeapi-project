@@ -1,0 +1,78 @@
+.Navbar {
+	width: 100%;
+	height: 8rem;
+	background-color: #0070c5;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.Navbar-logo {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.Navbar-logo a,
+.Navbar-logo img {
+	width: 15rem;
+	height: 100%;
+	margin-left: 2rem;
+}
+
+.Navbar-buttons {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.Navbar-btn {
+	width: 9rem;
+	height: 4rem;
+  display: flex;
+	padding: 0;
+  gap: 15px;
+  background-color: #ffe947;
+  outline: 3px #ffe947 solid;
+  outline-offset: -3px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.Navbar-btn a,
+.Navbar-btn p {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Navbar-btn .Navbar-text {
+  font-weight: 700;
+	letter-spacing: .5px;
+  font-size: 1.4rem;
+  transition: 400ms;
+}
+
+.Navbar-btn:hover {
+  background-color: transparent;
+}
+
+.Navbar-btn:hover .Navbar-text {
+  color: #ffe947;
+}
+
+@media (max-width: 768px) {
+	.Navbar-logo {
+		display: none;
+	}
+}

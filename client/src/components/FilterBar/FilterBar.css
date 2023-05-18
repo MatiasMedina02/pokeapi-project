@@ -1,0 +1,122 @@
+.FilterBar {
+	width: 20rem;
+	height: 40rem;
+	margin-top: 4rem;
+	position: relative;
+	display: none;
+	overflow-y: scroll;
+	border-bottom: 3px solid #8888883e;;
+}
+
+.FilterBar::-webkit-scrollbar {
+	width: 1.2rem;
+}
+
+.FilterBar::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 10px #888888;
+}
+
+.FilterBar::-webkit-scrollbar-thumb {
+	background: #888;
+	background-size: 2rem 2rem;
+	border-radius: 1rem;
+}
+
+.active {
+	display: block;
+}
+
+.FilterBar-title {
+	width: 100%;
+	padding: 1rem;
+	text-shadow: 0 8px 9px rgb(160, 149, 131), 0px -2px 1px #fff;
+	font-weight: bold;
+	font-size: 3rem;
+	background: -webkit-linear-gradient(#ffffff, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000000a5;
+}
+
+
+/* Types */
+.filterGroup-type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+	padding: 0 .5rem;
+}
+
+.filterGroup-input_type {
+  margin-right: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.filterGroup-input_type:checked {
+  background: radial-gradient(#3cff00, #ffffff);
+  border-color: #00ff6e;
+}
+
+.filterGroup-label_type {
+  font-size: 1.6rem;
+}
+
+
+
+/* Origin */
+.filterGroup-origin {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.filterGroup-origin:last-child {
+	padding-bottom: 2rem;
+}
+
+.filterGroup-input_origin {
+	appearance: none;
+  display: block;
+  margin: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: hsla(0, 0%, 100%, 0.77) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+  background-image: radial-gradient(#3cff00, #636363);
+  background-repeat: no-repeat;
+  transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+  transform .25s cubic-bezier(.8, 0, 1, 1);
+  outline: none;
+}
+
+.filterGroup-input_origin:checked {
+  transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+  transform .25s cubic-bezier(0, 0, .2, 1);
+}
+
+.filterGroup-input_origin:active {
+  transform: scale(1.5);
+  transition: transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+.filterGroup-input_origin,
+.filterGroup-input_origin:active {
+  background-position: 0 24px;
+}
+
+.filterGroup-input_origin:checked {
+  background-position: 0 0;
+}
+
+.filterGroup-input_origin:checked ~ .filterGroup-input_origin,
+.filterGroup-input_origin:checked ~ .filterGroup-input_origin:active {
+  background-position: 0 -24px;
+}

@@ -1,0 +1,108 @@
+.Home {
+	width: 100%;
+	min-height: 100vh;
+	margin-top: 4rem;
+	display: flex;
+}
+
+.Home-info {
+	width: 100%;
+	height: 100%;
+	margin-top: 6rem;
+}
+
+.Home-btn {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4rem;
+	margin-bottom: 3rem;
+}
+
+.btnFilter {
+	position: relative;
+	display: flex;
+	width: 15rem;
+	height: 5rem;
+	border-radius: 2rem;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 2rem;
+	gap: 1rem;
+}
+
+.btnFilter:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 15rem;
+	height: 5rem;
+	content: " ";
+	cursor: pointer;
+	transition: 0.75s ease-out;
+	border-radius: 2rem;
+}
+
+.btnFilter:hover {
+	transition: 0.1s ease-in;
+	transform: scale(1.05);
+	box-shadow: 6px 2px 20px 2px #888;
+}
+
+.HomeSelect {
+  position: relative;
+  display: inline-block;
+  width: 18rem;
+}
+
+.selectOrder {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 16px;
+  font-weight: bold;
+	border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  background-image: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-512.png");
+  background-repeat: no-repeat;
+  background-position: 14rem;
+	background-size: 3rem 3rem;
+  appearance: none;
+}
+
+
+.selectOrder:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.selectOrder option {
+	position: relative;
+	z-index: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+}
+
+.selectOrder option:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+/* Mediaquery */
+@media (max-width: 768px) {
+	.Home-btn {
+		padding-bottom: 0;
+		margin-bottom: 6rem;
+	}
+}
