@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./redux/store.js";
 import axios from 'axios';
 
+// axios.defaults.baseURL = "https://localhost:3001";
 axios.defaults.baseURL = "https://pokeapi-project-production.up.railway.app";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
