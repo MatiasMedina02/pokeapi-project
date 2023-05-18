@@ -16,9 +16,6 @@ import Navbar from "./components/Navbar/Navbar";
 // import Footer from "./components/Footer/Footer";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
-const URL = "http://localhost:3001/pokemons";
-const URL_TYPES = "http://localhost:3001/types";
-
 const App = () => {
   const { pokemons } = useSelector(state => state);
   const [allPokemons, setAllPokemons] = useState([]);
@@ -42,7 +39,7 @@ const App = () => {
 
   const getTypes = async () => {
     try {
-      const { data } = await axios(URL_TYPES);
+      const { data } = await axios("/types");
       setTypes(data);
     } catch (error) {
       console.error(error)
@@ -51,7 +48,7 @@ const App = () => {
 
   const onSearch = async name => {
     try {
-      const { data } = await axios(`${URL}/name?name=${name}`);
+      const { data } = await axios(`/pokemons/name?name=${name}`);
       const namePokemon = data.map(pokemon => pokemon.name);
       const filteredPokemons = pokemons.filter(pokemon => namePokemon.includes(pokemon.name));
       dispatch(getAllPokemonStore(filteredPokemons));

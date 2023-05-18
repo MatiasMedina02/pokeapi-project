@@ -26,8 +26,6 @@ import Dark from "../../assets/imgTypes/dark.png";
 import Fairy from "../../assets/imgTypes/fairy.png";
 import Unknown from "../../assets/imgTypes/unknown.png";
 
-const URL_POKEMON = "http://localhost:3001/pokemon";
-
 const Detail = () => {
 	const { id } = useParams();
 	const [pokemon, setPokemon] = useState({});
@@ -35,7 +33,7 @@ const Detail = () => {
 
 	useEffect(() => {
 		setIsLoading(true);
-		axios(`${URL_POKEMON}/${id}`)
+		axios(`/pokemon/${id}`)
 			.then(({ data }) => {
 				setPokemon(data);
 				setIsLoading(false);
@@ -46,32 +44,7 @@ const Detail = () => {
 			});
 	}, [id]);
 
-	const typeColors = {
-    normal: "#a8a878",
-    fighting: "#c03028",
-    flying: "#a890f0",
-    poison: "#a040a0",
-		ground: "#e0c068",
-		rock: "#b8a038",
-		bug: "#a8b820",
-		ghost: "#705898",
-		steel: "#b8b8d0",
-		fire: "#f08030",
-		water: "#6890f0",
-		grass: "#78c850",
-		electric: "#f8d030",
-		psychic: "#f85888",
-		ice: "#98d8d8",
-		dragon: "#7038f8",
-		dark: "#705848",
-		fairy: "#ee99ac",
-		unknown: "#68a090",
-		shadow: "#5b5b5b"
-  };
-
   const firstType = pokemon.types && pokemon.types[0];
-
-  const firstColorType = typeColors[firstType] || "#FFFFFF";
 
 	return (
 		<div className="Detail">
@@ -158,5 +131,28 @@ const Detail = () => {
 		</div>
 	)
 }
+
+// const typeColors = {
+// 	normal: "#a8a878",
+// 	fighting: "#c03028",
+// 	flying: "#a890f0",
+// 	poison: "#a040a0",
+// 	ground: "#e0c068",
+// 	rock: "#b8a038",
+// 	bug: "#a8b820",
+// 	ghost: "#705898",
+// 	steel: "#b8b8d0",
+// 	fire: "#f08030",
+// 	water: "#6890f0",
+// 	grass: "#78c850",
+// 	electric: "#f8d030",
+// 	psychic: "#f85888",
+// 	ice: "#98d8d8",
+// 	dragon: "#7038f8",
+// 	dark: "#705848",
+// 	fairy: "#ee99ac",
+// 	unknown: "#68a090",
+// 	shadow: "#5b5b5b"
+// };
 
 export default Detail
