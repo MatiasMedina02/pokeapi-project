@@ -92,11 +92,7 @@ const FormCreate = ({ types, allPokemons }) => {
 			return;
 		}
 		try {
-			await axios.post("/pokemons", pokemonForm, {
-				headers: {
-					"Content-Type": "application/json",
-				}
-			})
+			await axios.post("/pokemons", pokemonForm);
 			setPokemonForm({ 
 				name: "", 
 				image: "",
@@ -109,7 +105,7 @@ const FormCreate = ({ types, allPokemons }) => {
 				types: [],
 			});
 			navigate("/home");
-			location.reload();
+			window.location.reload();
 		} catch (error) {
 			console.error(error);
 		}
