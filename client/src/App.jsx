@@ -16,8 +16,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
-axios.defaults.baseURL = "http://localhost:3001";
-// axios.defaults.baseURL = "https://pokeapi-project-production.up.railway.app";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://pokeapi-project-production.up.railway.app";
 
 const App = () => {
   const { pokemons } = useSelector(state => state);
