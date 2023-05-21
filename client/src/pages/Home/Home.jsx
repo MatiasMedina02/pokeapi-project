@@ -56,7 +56,14 @@ const Home = ({ types, isLoading }) => {
 						</select>
 					</div>
 				</div>
-				<Cards countPage={countPage} setCountPage={setCountPage} currentPage={currentPage} setCurrentPage={setCurrentPage} isLoading={isLoading} />
+				<Cards 
+					countPage={countPage} 
+					setCountPage={setCountPage} 
+					currentPage={currentPage} 
+					setCurrentPage={setCurrentPage} 
+					isLoading={isLoading} 
+					isActive={isActive}
+				/>
 			</div>
 		</div>
 	)

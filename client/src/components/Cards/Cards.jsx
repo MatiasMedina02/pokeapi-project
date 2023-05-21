@@ -3,7 +3,7 @@ import "./Cards.css";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import { useSelector } from "react-redux";
 
-const Cards = ({ currentPage, setCurrentPage, countPage, setCountPage, isLoading }) => {
+const Cards = ({ currentPage, setCurrentPage, countPage, setCountPage, isLoading, isActive }) => {
   const { pokemons } = useSelector(state => state)
 
 	const filteredPokemons = () => {
@@ -30,7 +30,7 @@ const Cards = ({ currentPage, setCurrentPage, countPage, setCountPage, isLoading
         <LoadingSpinner />
       ) : (
         <>
-          <div className="Cards">
+          <div className={`Cards ${isActive ? "active" : ""}`}>
           {!pokemons.length ? (
             <h1>No hay resultados</h1>
           ) : (

@@ -1,7 +1,4 @@
 :root {
-  --blanco: #ffffff;
-  --negro: #000000;
-
   --fuentePrincipal: "Arial", cursive;
 }
 
@@ -22,15 +19,14 @@ html, body {
 
 /*Globales*/
 body {
-  font-size: 1.6rem;
   line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
 body::-webkit-scrollbar {
-	width: 1.2rem;
-  height: 1.2rem;
+	width: 2rem;
+  height: 2rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -47,7 +43,6 @@ p {
 }
 a {
   text-decoration: none;
-  color: var(--negro);
 }
 img {
   width: 100%;
@@ -74,6 +69,7 @@ h3 {
 }
 
 span{
+  font-size: 1.8rem;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -81,4 +77,41 @@ span{
 
 button {
   cursor: pointer;
+}
+
+/* Modo oscuro */
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark span,
+.dark p,
+.dark output {
+  color: #fff;
+}
+
+/* Modo claro */
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.light a {
+  color: #333;
+}
+
+.light h1,
+.light h2,
+.light h3,
+.light p,
+.light output {
+  color: #333;
 }

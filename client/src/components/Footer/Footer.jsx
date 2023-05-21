@@ -1,14 +1,22 @@
 import "./Footer.css";
+import { socialMedia } from "../../helpers/data";
 
 const Footer = () => {
-	const year = new Date().getFullYear();
+	const year = new Date();
 	return (
 		<div className="Footer">
-			<div className="createdBy">
-				<a target="_blank" href="https://github.com/MatiasMedina02">
-					<span>Created By: MatiasMedina02</span>
-				</a>
+			<div className="Footer-info">
+				<p>Copyright &copy; <span>{year.getFullYear()}</span> All Rights Reserved.</p>
 			</div>
+			<ul className="Footer-social_media">
+				{socialMedia.map(social => (
+					<li key={social.id}>
+						<a target="_blank" href={social.url}>
+						<img className="Footer-social_media__img" src={social.image} alt="Social Media" />
+						</a>
+					</li>
+				))}
+			</ul>
 		</div>
 	)
 }

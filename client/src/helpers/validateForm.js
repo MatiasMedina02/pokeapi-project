@@ -18,7 +18,7 @@ export const validation = (pokemonData) => {
 };
 
 export const validateTypes = (types) => {
-	if(!types.length || types.length === 1 || types.length > 3){
+	if(!types.length || types.length === 1 || types.length >= 4){
 		return "You must select 2 or 3 types.";
 	}
 	return "";

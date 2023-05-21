@@ -13,21 +13,24 @@ import FormCreate from "./pages/FormCreate/FormCreate";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+
+axios.defaults.baseURL = "http://localhost:3001";
 
 const App = () => {
   const { pokemons } = useSelector(state => state);
   const [allPokemons, setAllPokemons] = useState([]);
   const [types, setTypes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [theme, setTheme] = useState("light");
   const location = useLocation();
   const dispatch = useDispatch();
 
   const getAllPokemons = async () => {
     setIsLoading(true);
     try {
-      const { data } = await axios(URL);
+      const { data } = await axios("/pokemons");
       setAllPokemons(data);
       dispatch(getAllPokemonStore(data));
     } catch (error) {
@@ -64,8 +67,8 @@ const App = () => {
   }, []);
   
   return (
-    <div className="App">
-      {location.pathname !== "/" && <Navbar allPokemons={allPokemons} onSearch={onSearch} />}
+    <div className={`App ${theme}`}>
+      {location.pathname !== "/" && <Navbar theme={theme} setTheme={setTheme} allPokemons={allPokemons} onSearch={onSearch} />}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home types={types} isLoading={isLoading} />} />
@@ -73,7 +76,7 @@ const App = () => {
         <Route path="/create" element={<FormCreate allPokemons={allPokemons} types={types} />} />
         <Route path="*" element={<PageNotFound /> } />
       </Routes>
-      {/* {location.pathname !== "/" && <Footer />} */}
+      {location.pathname !== "/" && <Footer />}
     </div>
   )
 }

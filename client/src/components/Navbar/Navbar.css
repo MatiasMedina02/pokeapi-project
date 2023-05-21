@@ -1,7 +1,6 @@
 .Navbar {
 	width: 100%;
 	height: 8rem;
-	background-color: #0070c5;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -38,8 +37,6 @@
   display: flex;
 	padding: 0;
   gap: 15px;
-  background-color: #ffe947;
-  outline: 3px #ffe947 solid;
   outline-offset: -3px;
   border-radius: 10px;
   border: none;
@@ -63,14 +60,43 @@
   transition: 400ms;
 }
 
-.Navbar-btn:hover {
-  background-color: transparent;
+/* Light */
+.light .Navbar{ 
+	background-color: #0070c5;
 }
 
-.Navbar-btn:hover .Navbar-text {
+.light .Navbar-btn {
+	background-color: #ffe947;
+  outline: 3px #ffe947 solid;
+}
+
+.light .Navbar-btn:hover {
+	background-color: transparent;
+}
+
+.light .Navbar-btn:hover .Navbar-text {
   color: #ffe947;
 }
 
+/* Dark */
+.dark .Navbar{ 
+	background-color: #ffe947;
+}
+
+.dark .Navbar-btn {
+	background-color: #0070c5;
+  outline: 3px #0070c5 solid;
+}
+
+.dark .Navbar-btn:hover {
+	background-color: transparent;
+}
+
+.dark .Navbar-btn:hover .Navbar-text {
+  color: #0070c5;
+}
+
+/* Mediaquerys */
 @media (max-width: 768px) {
 	.Navbar-logo {
 		display: none;

@@ -4,10 +4,14 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 2rem;
-	margin: 3rem;
+	margin: 3rem 0;
 	padding-top: 3rem;
 	align-items: center;
 	justify-content: center;
+
+	&.active{
+		display: grid;
+	}
 }
 
 .Cards h1{
@@ -49,9 +53,27 @@
 }
 
 /* Mediaquerys */
+@media (max-width: 480px) {
+	.Cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
 @media (max-width: 768px) {
 	.Cards {
 		margin-top: 5rem;
+		grid-template-columns: repeat(2, 1fr);
+
+		&.active {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.active{
+		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
 }

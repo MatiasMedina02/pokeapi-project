@@ -29,12 +29,8 @@
 .FilterBar-title {
 	width: 100%;
 	padding: 1rem;
-	text-shadow: 0 8px 9px rgb(160, 149, 131), 0px -2px 1px #fff;
 	font-weight: bold;
 	font-size: 3rem;
-	background: -webkit-linear-gradient(#ffffff, #000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #000000a5;
 }
 
 
@@ -67,7 +63,6 @@
 .filterGroup-label_type {
   font-size: 1.6rem;
 }
-
 
 
 /* Origin */
@@ -119,4 +114,20 @@
 .filterGroup-input_origin:checked ~ .filterGroup-input_origin,
 .filterGroup-input_origin:checked ~ .filterGroup-input_origin:active {
   background-position: 0 -24px;
+}
+
+/* Light */
+.light .FilterBar-title {
+  text-shadow: 0 8px 9px rgb(160, 149, 131), 0px -2px 1px #fff;
+	background: -webkit-linear-gradient(#ffffff, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000000a5;
+}
+
+/* Dark */
+.dark .FilterBar-title {
+  text-shadow: 0 8px 9px rgb(160, 149, 131), 0px -2px 1px #fff;
+	background: -webkit-linear-gradient(#ffffff, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff10;
 }

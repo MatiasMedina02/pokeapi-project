@@ -6,8 +6,6 @@ import BtnBack from "../../components/BtnBack/BtnBack";
 import Pokeball from "../../assets/pokeball.png"
 import { useNavigate } from "react-router-dom";
 
-const URL_POKEMONS = "http://localhost:3001/pokemons";
-
 const FormCreate = ({ types, allPokemons }) => {
 	const navigate = useNavigate();
 	const [pokemonForm, setPokemonForm] = useState({ 
@@ -50,21 +48,28 @@ const FormCreate = ({ types, allPokemons }) => {
 	const handleSelectType = event => {
 		const { value } = event.target;
 		const updatedTypes = [...pokemonForm.types];
+		console.log(updatedTypes);
+		
 		if(updatedTypes.includes(value)){
 			const filteredTypes = updatedTypes.filter(type => type !== value);
 			const updatedPokemonForm = { ...pokemonForm, types: filteredTypes };
 			setPokemonForm(updatedPokemonForm);
-			return;
-		}
-		updatedTypes.push(value);
-		const updatedPokemonForm = { ...pokemonForm, types: updatedTypes };
-		setPokemonForm(updatedPokemonForm);
 
-		const typesError = validateTypes(updatedTypes);
-		setErrors({
-			...errors,
-			types: typesError,
-		});
+			const typesError = validateTypes(filteredTypes);
+			setErrors({
+				...errors,
+				types: typesError,
+			})
+		} else {
+			const updatedPokemonForm = { ...pokemonForm, types: [...updatedTypes, value] };
+			setPokemonForm(updatedPokemonForm);
+
+			const typesError = validateTypes([...updatedTypes, value]);
+			setErrors({
+				...errors,
+				types: typesError,
+			});
+		}
 	}
 
 	const handleSelectImage = event => {
@@ -87,7 +92,7 @@ const FormCreate = ({ types, allPokemons }) => {
 			return;
 		}
 		try {
-			await axios.post(URL_POKEMONS, pokemonForm, {
+			await axios.post("/pokemons", pokemonForm, {
 				headers: {
 					"Content-Type": "application/json",
 				}

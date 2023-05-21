@@ -46,6 +46,7 @@
 }
 
 .btn-title {
+  font-size: 3rem;
   color: var(--color-text);
 }
 
@@ -127,6 +128,12 @@
     height: 30rem;
     top: 30%;
     right: 24%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Landing-img {
+    visibility: hidden;
   }
 }
 

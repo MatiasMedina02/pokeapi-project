@@ -35,7 +35,7 @@
 	font-weight: 500;
 }
 
-.danger {
+.formGroup span.danger {
 	color: red;
 	font-size: 1.6rem;
 	font-weight: bold;
@@ -198,13 +198,8 @@ output {
 	text-transform: uppercase;
   z-index: 1;
   position: relative;
-  box-shadow: 0 5px 15px rgba(33, 33, 33, .2);
   overflow: hidden;
   cursor: pointer;
-}
-
-.btnCreate > span {
-  z-index: 2;
 }
 
 .btnCreate::before {
@@ -223,8 +218,8 @@ output {
   transition: transform 0.2s ease-in;
 }
 
-.btnCreate:hover {
-  color: #fff;
+.btnCreate:hover span {
+	color: #fff;
 }
 
 .btnCreate:hover::before {
@@ -240,4 +235,22 @@ output {
 	input[type="range"] {
 		width: 25rem;
 	}
+}
+
+/* Light */
+.light .btnCreate {
+	box-shadow: 0 5px 15px #01010133;
+}
+
+/* Dark */
+.dark .btnCreate {
+	box-shadow: 0 5px 15px #ffffff33;
+}
+
+.dark .btnCreate span {
+	color: #000;
+}
+
+.dark .btnCreate:hover span {
+	color: #fff;
 }
