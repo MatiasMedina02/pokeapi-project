@@ -4,15 +4,16 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  padding-top: 15rem;
-  background-color: #00b54f;
-  background-image: linear-gradient(0deg, #00b54f 0%, #ffe947 100%);
+  justify-content: center;
+  padding-bottom: 4rem;
+  background: linear-gradient(45deg, #d80032 0%, #d80032 49%,#000 49%, #000 51%,  #ffffff 51%, #ffffff 100%);
+  background-repeat: no-repeat;
   animation: 3s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
 }
 
 .Landing-logo {
   width: 40rem;
-  height: 23rem;
+  height: 22rem;
   position: relative;
 }
 
@@ -39,8 +40,8 @@
 .btn-container {
   display: flex;
   justify-content: center;
-  --color-text: #ffffff;
-  --color-background: #ef233c;
+  --color-text: #ef233c;
+  --color-background: #fff;
   --color-outline: #d80032;
   --color-shadow: #00000080;
 }
@@ -90,6 +91,7 @@
   margin-left: 15px;
   position: relative;
   top: 6%;
+  color: var(--color-text);
 }
   
 /* SVG */
@@ -183,7 +185,7 @@
 /* SVG animations */
 @keyframes color_anim {
   0% {
-    fill: white;
+    fill: #ef233c;
   }
 
   50% {
@@ -191,6 +193,6 @@
   }
 
   100% {
-    fill: white;
+    fill: #ef233c;
   }
 }

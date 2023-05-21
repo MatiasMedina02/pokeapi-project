@@ -1,12 +1,15 @@
-const regexNum = /[0-9]/;
+const regexName = /^[a-zA-Z\s]*$/;
 
 export const validation = (pokemonData) => {
 	const errors = {};
+	if(!pokemonData.name.length){
+		errors.name = "You must give a name to the pokemon."
+	}
 	if(pokemonData.name.length > 15){
 		errors.name = "The pokemon's name cannot be longer than 15 characters.";
 	}
-	if(regexNum.test(pokemonData.name)){
-		errors.name = "The pokemon's name cannot contain numbers"
+	if(!regexName.test(pokemonData.name)){
+		errors.name = "The pokemon's name cannot contain numbers or special characters."
 	}
 	if(!pokemonData.image){
 		errors.image = "You must select an image.";

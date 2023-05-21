@@ -36,6 +36,7 @@
 }
 
 .formGroup span.danger {
+	text-align: start;
 	color: red;
 	font-size: 1.6rem;
 	font-weight: bold;
