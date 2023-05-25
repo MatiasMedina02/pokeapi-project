@@ -33,6 +33,10 @@
 	font-size: 3rem;
 }
 
+.FilterBar label {
+  font-size: 1.6rem;
+}
+
 
 /* Types */
 .filterGroup-type {
@@ -58,10 +62,6 @@
 .filterGroup-input_type:checked {
   background: radial-gradient(#3cff00, #ffffff);
   border-color: #00ff6e;
-}
-
-.filterGroup-label_type {
-  font-size: 1.6rem;
 }
 
 

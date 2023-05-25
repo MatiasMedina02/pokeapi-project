@@ -48,7 +48,6 @@ const FormCreate = ({ types, allPokemons }) => {
 	const handleSelectType = event => {
 		const { value } = event.target;
 		const updatedTypes = [...pokemonForm.types];
-		console.log(updatedTypes);
 		
 		if(updatedTypes.includes(value)){
 			const filteredTypes = updatedTypes.filter(type => type !== value);

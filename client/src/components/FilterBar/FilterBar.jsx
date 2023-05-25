@@ -33,7 +33,7 @@ const FilterBar = ({ types, isActive }) => {
 			{types.map((type, index) => (
 				<div key={index} className="filterGroup-type">
 					<input className="filterGroup-input_type" onChange={handleFilter} type="checkbox" name={type.name} />
-					<label className="filterGroup-label_type" htmlFor={type.name}>{type.name.charAt(0).toUpperCase() + type.name.slice(1)}</label>
+					<label htmlFor={type.name}>{type.name.charAt(0).toUpperCase() + type.name.slice(1)}</label>
 				</div>
 			))}
 			<h3 className="FilterBar-title">Origin</h3>

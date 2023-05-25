@@ -51,6 +51,7 @@ const App = () => {
   }
 
   const onSearch = async name => {
+    setIsLoading(true);
     try {
       const { data } = await axios(`/pokemons/name?name=${name}`);
       const namePokemon = data.map(pokemon => pokemon.name);
@@ -59,6 +60,8 @@ const App = () => {
     } catch (error) {
       alert("You must search by the exact pokemon name");
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
