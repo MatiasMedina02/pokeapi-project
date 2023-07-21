@@ -45,7 +45,7 @@ const Cards = ({ currentPage, setCurrentPage, countPage, setCountPage, isLoading
                 <path d="M15 6l-6 6l6 6" />
               </svg>
             </button>
-            <span>{countPage}</span>
+            <span className="dark:text-black">{countPage}</span>
             <button onClick={nextPage} className="btnNext" type="text">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right" width="32" height="32" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
